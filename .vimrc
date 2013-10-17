@@ -4,17 +4,6 @@
 
 " read https://github.com/vgod/vimrc/blob/master/README.md for more info
 
-
-" For pathogen.vim: auto load all plugins in .vim/bundle
-
-let g:pathogen_disabled = []
-if !has('gui_running')
-   call add(g:pathogen_disabled, 'powerline')
-endif
-
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
-
 " General Settings
 
 set nocompatible	" not compatible with the old-fashion vi mode
@@ -23,7 +12,6 @@ set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set autoread		" auto read when file is changed from outside
 set number
-
 
 filetype off          " necessary to make ftdetect work on Linux
 syntax on
@@ -48,7 +36,6 @@ if has("gui_running")	" GUI color and font settings
   highlight CursorLine          guibg=#003853 ctermbg=24  gui=none cterm=none
 else
 " terminal color settings
-  colors vgod
 endif
 
 set clipboard=unnamed	" yank to the system register (*) by default
