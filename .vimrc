@@ -296,3 +296,6 @@ endif
 
 " --- coffee-script
 au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw! " recompile coffee scripts on write
+
+colorscheme grb256
+set t_Co=256
