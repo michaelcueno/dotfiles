@@ -1,89 +1,126 @@
-# Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="simple"
+# Path to your oh-my-zsh installation.
+export ZSH="/Users/michaelcueno/.oh-my-zsh"
 
-# Set to this to use case-sensitive completion
+PATH=$PATH:$HOME/.rvm/gems/ruby-2.0.0-p247/bin
+PATH=$PATH:$HOME/.rvm/gems/ruby-2.0.0-p247@global/bin
+PATH=$PATH:$HOME/.rvm/rubies/ruby-2.0.0-p247/bin
+PATH=$PATH:$HOME/.rvm/bin
+
+PATH=$PATH:/opt/local/bin
+PATH=$PATH:/opt/local/sbin
+PATH=$PATH:/usr/local/bin
+PATH=$PATH:/usr/bin
+PATH=$PATH:/bin
+PATH=$PATH:/usr/sbin
+PATH=$PATH:/sbin
+PATH=$PATH:/opt/X11/bin
+
+PATH=$PATH:$HOME/scripts
+PATH=$PATH:$HOME/scripts/unclassified
+PATH=$PATH:$HOME/scripts/utilities
+PATH=$PATH:$HOME/scripts/manip
+PATH=$PATH:$HOME/Workspace/AndroidDevKit/sdk/platform-tool
+
+PATH=$PATH:$HOME/Library/Python/2.7/bin
+
+
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="robbyrussell"
+
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+
+# Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
-# Uncomment this to disable bi-weekly auto-update checks
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
-# Uncomment to change how often before auto-updates occur? (in days)
+# Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
 
-# Uncomment following line if you want to disable colors in ls
+# Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
 
-# Uncomment following line if you want to disable autosetting terminal title.
+# Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
 
-# Uncomment following line if you want to disable command autocorrection
-# DISABLE_CORRECTION="true"
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
 
-# Uncomment following line if you want red dots to be displayed while waiting for completion
+# Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
 
-# Uncomment following line if you want to disable marking untracked files under
-# VCS as dirty. This makes repository status check for large repositories much,
-# much faster.
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Uncomment following line if you want to disable autosetting terminal title.
+DISABLE_CORRECTION="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load?
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew history ruby battery)
-#
-# set a fancy prompt (non-color, unless we know we "want" color)
-case "$TERM" in
-    xterm-color) color_prompt=yes;;
-esac
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(
+  git
+)
 
 source $ZSH/oh-my-zsh.sh
 
-# Path Varible
-PATH=$PATH:$HOME/scripts/unclassified
-PATH=$PATH:$HOME/scripts/utilities	
-PATH=$PATH:$HOME/scripts/manip
-PATH=$PATH:$HOME/scripts/work
-PATH=$PATH:$HOME/Library/Android/sdk/platform-tools/
-PATH=$PATH:$HOME/Library/Android/sdk/tools/
-PATH=$PATH:$HOME/dev-tools/depot_tools
-PATH=$PATH:/usr/local/go/bin
-PATH=$PATH:/usr/local/sbin
-PATH=$PATH:/usr/textbin/
-PATH=$PATH:/Users/mcueno/workspace/smash/walkthrough/src/SMASHScripts/scripts
-#PATH=$PATH:/Users/mcueno/workspace/ios/env/Appledoc-3.0.x-XcodeBuildTool-mainline/appledoc
+# User configuration
 
-# brazil tools
-#PATH=$HOME/dev-tools/Cloud9BrazilBuild-1.0/bin:$PATH
-PATH=/apollo/env/ruby193/bin:$PATH
-PATH=/apollo/env/SDETools/bin:$PATH
+# export MANPATH="/usr/local/man:$MANPATH"
 
-# Environment variables 
-export ANDROID_HOME=$HOME/Library/Android
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
 
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
 
-# Functions 
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
 #
-# Set the java compiler 
-alias java_ls='/usr/libexec/java_home -V 2>&1 | grep -E "\d.\d.\d[,_]" | cut -d , -f 1 | colrm 1 4 | grep -v Home'
+# aliases
+alias update="source ~/.zshrc"
 
-function java_use() {
-    export JAVA_HOME=$(/usr/libexec/java_home -v $1)
-    export PATH=$JAVA_HOME/bin:$PATH
-#   java -version
-}
-
-export ANT_OPTS=-Xmx1g
-
-# java_use '1.7.0_65'; 
-
-export NVM_DIR="/Users/mcueno/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+# disable autocorrect
+unsetopt correct_all

@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-FILES=(.bashrc .gitignore .oh-my-zsh .vim .vimrc .zshrc)
+FILES=(.bashrc .bash_profile .oh-my-zsh .vim .vimrc .zshrc)
 
 for file in ${FILES[@]}; do 
   cp -rf ~/$file .

@@ -294,8 +294,10 @@ if !has("gui_running")
    nmap OD h
 endif
 
+set tw=100
+
 " --- coffee-script
 au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw! " recompile coffee scripts on write
 
-colorscheme grb256
+colorscheme solarized
 set t_Co=256
