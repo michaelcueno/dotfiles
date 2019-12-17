@@ -23,7 +23,6 @@ filetype plugin on    " Enable filetype-specific plugins
 " auto reload vimrc when editing it
 autocmd! bufwritepost .vimrc source ~/.vimrc
 
-
 syntax on		" syntax highlight
 set hlsearch		" search highlighting
 
@@ -299,5 +298,5 @@ set tw=100
 " --- coffee-script
 au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw! " recompile coffee scripts on write
 
-colorscheme solarized
+colorscheme dark 
 set t_Co=256
